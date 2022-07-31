@@ -179,8 +179,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: Colors.white,
+        elevation: 5,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
@@ -188,8 +188,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           },
         ),
         title: const Text(
-          "Login",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          "Sign Up",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ),
       body: Center(

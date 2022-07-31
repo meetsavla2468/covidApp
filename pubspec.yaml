@@ -47,11 +47,20 @@ dependencies:
   google_fonts: ^3.0.1
   flutter_svg: ^1.1.1+1
   convert: ^3.0.2
+  curved_drawer_fork: ^0.0.1
+  curved_navigation_bar: ^1.0.3
+  flutter_launcher_icons: ^0.9.3
 
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  image_path_android: "assets/icon-app.png"
+  image_path_ios: "assets/icon-app.png"
+  android: true
+  ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
