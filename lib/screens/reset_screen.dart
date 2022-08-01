@@ -59,7 +59,7 @@ class _resetScreenState extends State<resetScreen> {
     final resetButton = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
-      color: const Color.fromARGB(255, 255, 99, 71),
+      color: const Color.fromARGB(255, 47, 79, 92),
       child: MaterialButton(
         padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
         minWidth: MediaQuery.of(context).size.width,
@@ -81,6 +81,12 @@ class _resetScreenState extends State<resetScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 5,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
         title: const Text(
           "Forgot password",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
@@ -89,43 +95,43 @@ class _resetScreenState extends State<resetScreen> {
       backgroundColor: Colors.white,
       body: Center(
           child: SingleChildScrollView(
-            child: Container(
-              color: Colors.white,
-              child: Padding(
-                padding: const EdgeInsets.all(36.0),
-                child: Form(
-                  key: _formKey,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      SizedBox(
-                        height: 200,
-                        child: Image.asset(
-                          "assets/cdc-k0KRNtqcjfw-unsplash.jpg",
-                          //fit: BoxFit.contain,
-                        ),
-                      ),
-                      const SizedBox(height: 45),
-                      emailField,
-                      const SizedBox(height: 65),
-                      resetButton,
-                      const SizedBox(height: 130),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <Widget>[
-                          Text(
-                            "By Continuing you agree to the Terms of\n      Services and Privacy Policy.",
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ],
-                      )
-                    ],
+        child: Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(36.0),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(
+                    height: 200,
+                    child: Image.asset(
+                      "assets/icon-app.png",
+                      //fit: BoxFit.contain,
+                    ),
                   ),
-                ),
+                  const SizedBox(height: 45),
+                  emailField,
+                  const SizedBox(height: 65),
+                  resetButton,
+                  const SizedBox(height: 130),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      Text(
+                        "By Continuing you agree to the Terms of\n      Services and Privacy Policy.",
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
-          )),
+          ),
+        ),
+      )),
     );
   }
 

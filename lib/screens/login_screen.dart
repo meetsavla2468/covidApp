@@ -90,7 +90,8 @@ class _LoginScreenState extends State<LoginScreen> {
     final loginButton = Material(
       elevation: 5,
       borderRadius: BorderRadius.circular(30),
-      color: const Color.fromARGB(255, 255, 99, 71),
+      //color: const Color.fromARGB(255, 255, 99, 71),
+      color: const Color.fromARGB(255, 47, 79, 92),
       child: MaterialButton(
         padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
         minWidth: MediaQuery.of(context).size.width,
@@ -131,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 200,
                         child: Image.asset(
-                          "assets/cdc-k0KRNtqcjfw-unsplash.jpg",
+                          "assets/icon-app.png",
                           //fit: BoxFit.contain,
                         ),
                       ),
@@ -181,7 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     borderRadius: BorderRadius.circular(30),
                                     side: const BorderSide(color: Colors.white)))),
                             icon: const FaIcon(FontAwesomeIcons.google,
-                                color: Colors.red),
+                              color: Colors.red,),
                             label: const Text('Login with Google'),
                           )),
                       const SizedBox(height: 15),

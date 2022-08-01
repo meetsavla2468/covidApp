@@ -122,9 +122,9 @@ class _casesState extends State<cases> {
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: const <Widget>[
-                                Text("581837610",style: TextStyle(color: Colors.blue,fontSize: 20,fontWeight: FontWeight.bold),),
-                                Text("551829622", style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.bold),),
-                                Text("6419151", style: TextStyle(color: Colors.red, fontSize: 20, fontWeight: FontWeight.bold),),
+                                Text("581985710",style: TextStyle(color: Colors.blue,fontSize: 20,fontWeight: FontWeight.bold),),
+                                Text("551982435", style: TextStyle(color: Colors.green, fontSize: 20, fontWeight: FontWeight.bold),),
+                                Text("6419467", style: TextStyle(color: Colors.red, fontSize: 20, fontWeight: FontWeight.bold),),
                                 //Padding(padding: EdgeInsets.only(right: 0)),
                               ],
                             ),

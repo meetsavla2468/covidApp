@@ -117,9 +117,9 @@ class _worldState extends State<world> {
                   width: 50,
                   child: GestureDetector(
                     onTap: ()=> showcard(
-                      "123",
-                      "123",
-                      "123",
+                      "40679",
+                      "4325",
+                      "35669",
                     ),
                     child: Card(
                       child: Container(

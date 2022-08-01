@@ -47,7 +47,7 @@ class _indiaState extends State<india> {
       appBar: AppBar(
         title: const Text('Statewise Statistics'), backgroundColor: const Color(0xFF152238),
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Container(
         child: FutureBuilder(
           future: datas,
@@ -73,19 +73,25 @@ class _indiaState extends State<india> {
                       ),
                       child: Card(
                         child: Container(
-                          color: const Color(0xFF292929),
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(Radius.circular(6)),
+                            border: Border.all(
+                              color: Colors.blue,
+                              width: 1.5,
+                            ),
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              const Padding(padding: EdgeInsets.only(top: 5)),
+                              const Padding(padding: EdgeInsets.only(top: 4)),
                               Text("Cases : ${(SnapShot.data as dynamic)[index]['totalConfirmed'].toString()}",
-                                  style: const TextStyle(color: Color(0xFF45b6fe), fontWeight: FontWeight.bold),),
+                                  style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
                               const Padding(padding: EdgeInsets.only(top: 5)),
                               const Image(image: AssetImage("assets/cases.png"),height: 84, width: 84,),
                               const Padding(padding: EdgeInsets.only(top: 20)),
                               Text("${(SnapShot.data as dynamic)[index]['loc']}",
-                                style: const TextStyle(fontSize: 14, color: Colors.white)),
+                                style: const TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold)),
                             ],
                           ),
                         ),

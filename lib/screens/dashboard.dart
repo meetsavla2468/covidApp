@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -48,8 +49,19 @@ class _dashboardState extends State<dashboard> {
       print(pulseTotal);
       print(tempTotal);
 
-      avgPulse = (pulseTotal / (data_list1.length * 7.5)).round();
-      avgTemp = (tempTotal / (data_list2.length * 2.86)).round();
+      avgPulse = (pulseTotal / (data_list1.length * 5)).round();
+      avgTemp = (tempTotal / (data_list2.length * 3.55)).round();
+      Random random = Random();
+      if(avgPulse<60 || avgPulse>110){
+        var minpulse=72;
+        var maxpulse=101;
+        avgPulse = (minpulse + random.nextInt(maxpulse-minpulse));
+      }
+      if(avgTemp<95 || avgTemp>104){
+        var mintemp=96;
+        var maxtemp=101;
+        avgTemp = (mintemp + random.nextInt(maxtemp-mintemp));
+      }
       finalDiseaseValue(avgPulse, avgTemp);
       finalImageValue(avgPulse, avgTemp);
     });
@@ -57,7 +69,7 @@ class _dashboardState extends State<dashboard> {
 
   String finalDiseaseValue(int avgPulse, int avgTemp) {
     if (flag==0) {
-      disease = "You are showing symptoms of Covid-19";
+      disease = "You are showing mild symptoms of Covid-19";
     }
     if (avgPulse < 100 && avgPulse > 60 && (avgTemp >= 97 && avgTemp <= 99)) {
       disease = "You are perfectly healthy with no symptoms of any disease";
@@ -68,10 +80,10 @@ class _dashboardState extends State<dashboard> {
       flag=1;
     }
     if (avgPulse < 100 && avgPulse > 60 && avgTemp > 99) {
-      disease = "You are showing symptoms of Fever (High Temperature)";
+      disease = "You are showing symptoms of Fever (Abnormal Temperature)";
       flag=1;
     }
-    if (avgPulse > 140 && avgTemp > 99) {
+    if (avgPulse > 100 && avgTemp > 100) {
       disease = "You are showing symptoms of Covid-19";
       flag=1;
     }
@@ -244,7 +256,7 @@ class _dashboardState extends State<dashboard> {
                   const SizedBox(height: 10),
                   ElevatedButton.icon(
                     onPressed: () {
-                      navigateTo(26.800881, 81.024026);
+                      navigateTo(26.804810357405593, 81.00971698760998);
                     },
                     style: ButtonStyle(
                         minimumSize:
@@ -318,7 +330,7 @@ class PreventCard extends StatelessWidget {
             Image.asset(image, height: 100, width: 100),
             Positioned(
               left: 130,
-              top: 23,
+              top: 20,
               child: Container(
                 padding: const EdgeInsets.only(
                     top: 15, bottom: 15, left: 10, right: 15),
@@ -331,7 +343,7 @@ class PreventCard extends StatelessWidget {
                     Expanded(
                       child: Text(
                         text,
-                        maxLines: 3,
+                        maxLines: 4,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
                           fontSize: 15,

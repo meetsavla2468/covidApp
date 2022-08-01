@@ -10,7 +10,7 @@
         </intent>
     </queries>
     <application
-        android:label="Covid Tracker"
+        android:label="UrPulse"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
