@@ -10,7 +10,7 @@
         </intent>
     </queries>
     <application
-        android:label="UrPulse"
+        android:label="HealMe"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
